@@ -15,7 +15,7 @@ npm run dev
 npm run build
 ```
 
-`next.config.js` uses `output: 'export'`, producing a static `out/` directory suitable for Vercel, Netlify, Cloudflare Pages, GitHub Pages or any static host.
+`next.config.mjs` uses `output: "export"`, producing a static `out/` directory suitable for Vercel, Netlify, Cloudflare Pages, GitHub Pages or any static host.
 
 ## Vercel deployment
 
@@ -24,6 +24,8 @@ Import the repository in Vercel, use the default Next.js framework settings, and
 ## Static host deployment
 
 Run `npm run build` and upload the generated `out/` folder to your static host.
+
+For GitHub Pages, keep `public/.nojekyll` in the repository. Next.js copies it into `out/.nojekyll` during export so Pages serves the `_next/` asset directory instead of ignoring it; without that file the site can appear as plain, unstyled HTML.
 
 ## Replace before going live
 

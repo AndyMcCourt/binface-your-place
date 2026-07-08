@@ -29,14 +29,15 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        with:
-          static_site_generator: next
 
       - name: Install dependencies
         run: npm install
 
       - name: Build static site
         run: npm run build
+
+      - name: Disable Jekyll for exported Next.js assets
+        run: touch ./out/.nojekyll
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
