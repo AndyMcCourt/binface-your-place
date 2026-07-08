@@ -34,5 +34,5 @@ For GitHub Pages, keep `public/.nojekyll` in the repository. Next.js copies it i
 - article copy review
 - approval status
 - any real imagery
-- any official campaign wording
+- any homemade support wording
 - final compliance review
