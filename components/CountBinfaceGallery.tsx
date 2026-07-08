@@ -17,7 +17,7 @@ const frames = [
   {
     title: 'Helmet energy, close-up edition',
     caption: 'The same licensed source, cropped for a closer look at the unmistakable campaign helmet.',
-    className: 'object-cover object-top',
+    focus: 'close',
   },
 ];
 
