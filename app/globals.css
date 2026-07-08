@@ -17,17 +17,17 @@ a { @apply transition-colors; }
 .official-button { @apply inline-flex items-center justify-center rounded-full border-2 border-white bg-white px-6 py-3 text-center font-black uppercase tracking-wide text-black shadow-[4px_4px_0_#777] transition hover:-translate-y-0.5 hover:bg-bin hover:text-black hover:shadow-[6px_6px_0_#fff]; }
 .official-link { @apply no-underline; }
 
-.unofficial-note { @apply my-8 grid gap-5 rounded-3xl border-4 border-white bg-zinc-900 p-6 shadow-[10px_10px_0_rgba(255,255,255,.18)] md:grid-cols-[1fr_auto] md:items-center; }
-.unofficial-note h2, .street-section h2, .craft-panel h2, .craft-wave h2, .section-title { @apply mt-3 font-display text-4xl uppercase leading-none md:text-6xl; }
+.unofficial-note { @apply my-12 grid gap-5 rounded-3xl border-4 border-white bg-zinc-900 p-6 shadow-[10px_10px_0_rgba(255,255,255,.18)] md:grid-cols-[1fr_auto] md:items-center; }
+.unofficial-note h2, .street-section h2, .craft-panel h2, .craft-wave h2, .section-title, .before-after-strip h2 { @apply mt-3 font-display text-5xl uppercase leading-none md:text-7xl; }
 .unofficial-note p, .street-section p, .craft-panel p, .craft-wave p { @apply mt-4 max-w-4xl text-lg text-silver; }
 
-.street-section, .craft-wave { @apply my-10 rounded-[2rem] border-4 border-white bg-gradient-to-br from-zinc-100 to-zinc-400 p-6 text-black shadow-[12px_12px_0_#000] md:p-10; }
+.street-section, .craft-wave { @apply my-16 rounded-[2rem] border-4 border-white bg-gradient-to-br from-zinc-100 to-zinc-400 p-6 text-black shadow-[12px_12px_0_#000] md:p-10; }
 .street-section .section-kicker, .craft-wave .section-kicker { @apply text-black; }
 .street-section p, .craft-wave p { @apply text-zinc-900; }
 .craft-wave { @apply bg-gradient-to-br from-white via-zinc-300 to-zinc-500; }
-.craft-panel { @apply my-10 rounded-[2rem] border-4 border-dashed border-white bg-[#2b251b] p-6 shadow-[10px_10px_0_rgba(255,255,255,.16)] md:p-10; background-image: linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px); background-size: 24px 24px; }
+.craft-panel { @apply my-16 rounded-[2rem] border-4 border-dashed border-white bg-[#2b251b] p-6 shadow-[10px_10px_0_rgba(255,255,255,.16)] md:p-10; background-image: linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px); background-size: 24px 24px; }
 
-.craft-grid { @apply mt-8 grid gap-5 md:grid-cols-3; }
+.craft-grid { @apply mt-8 grid gap-7 md:grid-cols-3; }
 .craft-card, .home-idea-card { @apply rounded-3xl border-4 border-black bg-white p-5 text-black shadow-[8px_8px_0_#111] transition-transform hover:-translate-y-1 hover:rotate-1; }
 .craft-card h3, .home-idea-card h3 { @apply mt-4 font-display text-3xl uppercase leading-none; }
 .craft-card p, .home-idea-card p { @apply mt-3 text-base font-semibold text-zinc-800; }
@@ -48,7 +48,9 @@ footer a { @apply hover:text-bin; }
   .official-button { @apply w-full px-4 py-3; }
   .unofficial-note, .street-section, .craft-panel, .craft-wave { @apply rounded-2xl p-5; }
   .unofficial-note h2, .street-section h2, .craft-panel h2, .craft-wave h2, .section-title { @apply text-4xl; }
-  .craft-grid, .material-list { @apply grid-cols-1; }
+  .craft-grid, .material-list, .lookbook-grid { @apply grid-cols-1; }
+  .hero-visual { transform: rotate(0deg); }
+  .visual-card:hover { transform: none; }
   .sticker-label, .hero-badge { transform: rotate(0deg); @apply text-xs; }
 }
 
@@ -77,3 +79,35 @@ footer a { @apply hover:text-bin; }
   .practical-section h2 { @apply text-2xl; }
   .practical-section ul, .practical-section ol { @apply text-base; }
 }
+
+
+.section-intro { @apply mt-4 max-w-3xl text-xl font-bold text-silver; }
+.hero-visual { @apply rounded-[2rem] border-4 border-white bg-warning p-3 shadow-[12px_12px_0_rgba(255,255,255,.2)]; transform: rotate(1.5deg); }
+.hero-visual figcaption { @apply mt-3 rounded-xl bg-black px-4 py-3 text-sm font-black uppercase tracking-wider text-warning; }
+.svg-illustration { @apply block h-auto w-full; }
+
+.visual-card { @apply overflow-hidden rounded-[1.7rem] border-4 border-black bg-zinc-100 text-black shadow-[9px_9px_0_#111] transition duration-200 hover:-translate-y-1 hover:rotate-1 hover:shadow-[12px_12px_0_#111] focus-within:-translate-y-1; }
+.visual-card:focus-within { @apply outline outline-4 outline-offset-4 outline-bin; }
+.visual-card__image { @apply border-b-4 border-black bg-warning p-3; background-image: repeating-linear-gradient(-6deg, rgba(0,0,0,.08) 0 2px, transparent 2px 14px); }
+.visual-card__body { @apply p-5; }
+.visual-card__label { @apply inline-block rounded-full border-2 border-black bg-bin px-3 py-1 text-xs font-black uppercase tracking-widest text-black shadow-[3px_3px_0_#111]; transform: rotate(-2deg); }
+.visual-card h3 { @apply mt-4 font-display text-3xl uppercase leading-none; }
+.visual-card p { @apply mt-3 text-base font-bold leading-7 text-zinc-800; }
+
+.lookbook-grid { @apply mt-8 grid gap-6 md:grid-cols-3; }
+.lookbook-tile { @apply overflow-hidden rounded-[1.7rem] border-4 border-white bg-white/10 shadow-[8px_8px_0_rgba(255,255,255,.16)]; }
+.lookbook-tile img { @apply border-b-4 border-white bg-warning p-3; }
+.lookbook-tile figcaption { @apply grid gap-2 p-5; }
+.lookbook-tile strong { @apply font-display text-3xl uppercase leading-none text-white; }
+.lookbook-tile span { @apply text-base font-bold text-silver; }
+
+.before-after-strip { @apply my-16 rounded-[2rem] border-4 border-white bg-black/55 p-6 shadow-[10px_10px_0_rgba(255,255,255,.16)] md:p-10; }
+.before-after-card { @apply overflow-hidden rounded-3xl border-4 border-white bg-zinc-100 text-black shadow-[7px_7px_0_rgba(255,255,255,.18)]; }
+.before-after-card img { @apply border-b-4 border-black bg-white p-2; }
+.before-after-card div { @apply grid gap-2 p-4; }
+.before-after-card span { @apply rounded-full bg-zinc-300 px-3 py-1 text-xs font-black uppercase tracking-wider; }
+.before-after-card strong { @apply rounded-full bg-bin px-3 py-2 text-sm font-black uppercase tracking-wider text-black; }
+
+.material-chip-grid { @apply mt-6 flex flex-wrap gap-3; }
+.material-chip { @apply inline-flex items-center gap-3 rounded-2xl border-2 border-white bg-black/45 px-4 py-3 font-black text-white shadow-[4px_4px_0_rgba(255,255,255,.18)]; }
+.material-chip b { @apply grid h-8 w-8 place-items-center rounded-full bg-bin text-lg text-black; }

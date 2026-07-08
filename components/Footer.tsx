@@ -7,7 +7,7 @@ export function Footer() {
         <div>
           <p className="font-display text-2xl">BINFACE YOUR PLACE</p>
           <p className="mt-2 text-sm text-silver">
-            Binface Your Place is unofficial and unaffiliated with Count Binface. It is a fan-made collection of arts-and-crafts ideas for harmless home decoration. For official Count Binface news, policies, merch and intergalactic leadership, visit the official Count Binface website.
+            Binface Your Place is unofficial, independent and unaffiliated with Count Binface. It is a collection of arts-and-crafts ideas for harmless home decoration. For official Count Binface news, policies, merch and intergalactic leadership, visit the official Count Binface website.
           </p>
           <p className="mt-2 text-sm font-bold text-white">Your street, but more Binface. One window, bin, fence and front garden at a time.</p>
         </div>

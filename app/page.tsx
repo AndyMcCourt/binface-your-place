@@ -7,25 +7,41 @@ const streetCards = [
 ];
 
 const binfaceIdeas = [
-  ['Your Window', 'Turn a normal window into a glowing rectangle of Binface-inspired support. Try paper signs, cardboard slogans, foil stars and a heroic face peering out at local democracy.'],
-  ['Your Wheelie Bin', 'The natural home of Binface energy. Add a removable cardboard podium, a tiny manifesto, a paper rosette or a sign declaring your bin ready for high office.'],
-  ['Your Front Door', 'Give arrivals the sense that they are entering a harmless constitutional incident. Try a handmade poster, a temporary banner or a doormat message.'],
-  ['Your Fence', 'A fence is just a manifesto that has not found its voice yet. Add bunting, signs, flags or a row of cardboard planets.'],
-  ['Your Garden', 'Create a tiny outdoor scene: moon landing, press conference, embassy, campaign trail or one heroic bin addressing the shrubs.'],
-  ['Your Porch', 'Make your porch look like a miniature campaign HQ from space using posters, cardboard arrows, foil, paper badges and absolutely no dignity.'],
+  ['Your Window', 'Window kit', 'window-binface.svg', 'Homemade window display with paper signs, foil stars and a Binface-inspired face.', 'Paper signs, foil stars and one heroic helmet shape.'],
+  ['Your Wheelie Bin', 'Bin podium', 'wheelie-bin-podium.svg', 'Wheelie bin decorated as a homemade press podium with a cardboard manifesto sign.', 'A removable lectern for a bin with destiny.'],
+  ['Your Front Door', 'Door banner', 'front-door-banner.svg', 'Front door decorated with a temporary handmade banner and doormat sign.', 'Temporary tape, paper banner, doormat nonsense.'],
+  ['Your Fence', 'Fence kit', 'fence-bunting.svg', 'Fence decorated with paper bunting, cardboard planets and homemade signs.', 'Bunting, planets and friendly public cheer.'],
+  ['Your Garden', 'Moon scene', 'garden-moon-landing.svg', 'Front garden decorated as a homemade moon landing scene with foil and cardboard stars.', 'Foil moon, cardboard stars, heroic wheelie bin.'],
+  ['Your Porch', 'Porch HQ', 'porch-campaign-hq.svg', 'Porch decorated as a miniature homemade space campaign headquarters.', 'Arrows, signs and paper badges from space.'],
 ];
 
 const projectCards = [
-  ['The Wheelie Bin Press Conference', 'Turn one innocent wheelie bin into a homemade press podium. Add a cardboard sign, a dramatic backdrop and the solemn air of an announcement nobody asked for.'],
-  ['The Binface Embassy', 'Declare your porch, window or garden gate to be a tiny unofficial embassy of Binface-inspired nonsense. Add paper flags, handmade signs and unnecessary ceremony.'],
-  ['The Front Garden Moon Landing', 'Use foil, cardboard, paper stars and one brave bin to create a low-budget lunar scene on your own front path.'],
-  ['The Constitutionally Significant Doormat', 'Upgrade your doormat with a temporary handmade sign. Every visitor must cross from ordinary life into harmless civic silliness.'],
-  ['A Manifesto for Sensible Lids', 'Make a tiny homemade manifesto for your bin. Suggested policies: tighter lids, better snacks, stronger cardboard and a decisive end to beige.'],
-  ['The Window of Mild Defiance', 'Make a bold, homemade window display that says your household has chosen cardboard, silliness and intergalactic taste over ordinary beige living.'],
-  ['The Fence of Public Cheerfulness', 'Turn your fence into a friendly row of signs, flags or planets. Nothing permanent. Nothing grumpy. Just enough nonsense for passers-by to notice.'],
+  ['The Wheelie Bin Press Conference', 'Press kit', 'wheelie-bin-press-conference.svg', 'Turn one innocent wheelie bin into a homemade press podium.'],
+  ['The Binface Embassy', 'Embassy', 'binface-embassy.svg', 'Declare your porch, window or garden gate to be a tiny unofficial embassy.'],
+  ['The Front Garden Moon Landing', 'Lunar bin', 'front-garden-moon-landing.svg', 'Use foil, cardboard, paper stars and one brave bin.'],
+  ['The Constitutionally Significant Doormat', 'Threshold', 'significant-doormat.svg', 'Upgrade your doormat with a temporary handmade sign.'],
+  ['A Manifesto for Sensible Lids', 'Manifesto', 'sensible-lids-manifesto.svg', 'Make a tiny homemade manifesto for your bin.'],
+  ['The Window of Mild Defiance', 'Window', 'window-mild-defiance.svg', 'Choose cardboard, silliness and intergalactic taste.'],
+  ['The Fence of Public Cheerfulness', 'Fence', 'fence-public-cheerfulness.svg', 'Turn your fence into a friendly row of signs and flags.'],
 ];
 
-const materials = ['cardboard', 'paper', 'foil', 'string', 'tape', 'felt tips', 'old delivery boxes', 'reusable decorations', 'removable window-safe materials', 'paper plates', 'bottle tops', 'leftover wrapping paper', 'anything silver'];
+const lookBook = [
+  ['Window poster', 'Paper slogan, foil stars, visible from the pavement.', 'window-binface.svg'],
+  ['Bin podium', 'One wheelie bin. One cardboard lectern. Infinite authority.', 'wheelie-bin-podium.svg'],
+  ['Door banner', 'A temporary welcome to mild constitutional chaos.', 'front-door-banner.svg'],
+  ['Fence bunting', 'Flags, planets and signs on your own fence.', 'fence-bunting.svg'],
+  ['Garden scene', 'A tiny moon landing for one heroic household bin.', 'garden-moon-landing.svg'],
+  ['Porch HQ', 'Arrows, badges and deeply unserious civic energy.', 'porch-campaign-hq.svg'],
+];
+
+const beforeAfter = [
+  ['Before: normal window', 'After: window of mild defiance', 'before-after-window.svg'],
+  ['Before: ordinary bin', 'After: bin with destiny', 'before-after-bin.svg'],
+  ['Before: quiet fence', 'After: fence of public cheerfulness', 'before-after-fence.svg'],
+];
+
+const materials = ['cardboard', 'paper', 'foil', 'string', 'tape', 'felt tips', 'delivery boxes', 'reusable decorations', 'window-safe materials', 'paper plates', 'bottle tops', 'wrapping paper', 'anything silver'];
+const materialIcons = ['▰', '▤', '✦', '〰', '▱', '✎', '▣', '★', '▢', '◯', '●', '▧', '✧'];
 
 export default function Home() {
   return (
@@ -36,7 +52,7 @@ export default function Home() {
           <div>
             <p className="section-kicker">Make your place count.</p>
             <h2>A quick note from Earth</h2>
-            <p>Binface Your Place is unofficial and unaffiliated with Count Binface. It is a fan-made collection of arts-and-crafts ideas for decorating your own place. For official Count Binface news, policies, merch and intergalactic leadership, visit the official Count Binface website.</p>
+            <p>Binface Your Place is unofficial, independent and unaffiliated with Count Binface. It is a collection of arts-and-crafts ideas for decorating your own place. For official Count Binface news, policies, merch and intergalactic leadership, visit the official Count Binface website.</p>
             <p className="mt-3 text-sm font-bold text-white">This site is about Binface-inspired home decoration ideas, not current campaign updates.</p>
           </div>
           <a className="official-button official-link" href="https://www.countbinface.com/">Official Count Binface website</a>
@@ -52,6 +68,13 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="before-after-strip" aria-labelledby="before-after-heading">
+          <h2 id="before-after-heading">Before and after</h2>
+          <div className="grid gap-5 md:grid-cols-3">
+            {beforeAfter.map(([before, after, image]) => <article className="before-after-card" key={before}><img className="svg-illustration" src={`/images/${image}`} alt="" /><div><span>{before}</span><strong>{after}</strong></div></article>)}
+          </div>
+        </section>
+
         <section className="craft-panel">
           <p className="section-kicker">Kitchen-table democracy.</p>
           <h2>Make your place count</h2>
@@ -60,11 +83,20 @@ export default function Home() {
           <span className="sticker-label">Visible from the street. Made at the kitchen table.</span>
         </section>
 
-        <section id="ideas" className="py-14 scroll-mt-8">
+        <section className="py-16">
+          <p className="section-kicker">Inspiration board</p>
+          <h2 className="section-title">The look book</h2>
+          <p className="section-intro">Start with something small. A window. A bin. A fence. A sign. Then let the nonsense spread politely.</p>
+          <div className="lookbook-grid">
+            {lookBook.map(([label, caption, image]) => <figure className="lookbook-tile" key={label}><img className="svg-illustration" src={`/images/${image}`} alt="" /><figcaption><strong>{label}</strong><span>{caption}</span></figcaption></figure>)}
+          </div>
+        </section>
+
+        <section id="ideas" className="py-16 scroll-mt-8">
           <p className="section-kicker">Cardboard is the people’s medium.</p>
           <h2 className="section-title">What can you Binface?</h2>
           <div className="craft-grid">
-            {binfaceIdeas.map(([title, text]) => <article className="home-idea-card" key={title}><h3>{title}</h3><p>{text}</p></article>)}
+            {binfaceIdeas.map(([title, label, image, alt, text]) => <article className="visual-card" key={title}><div className="visual-card__image"><img className="svg-illustration" src={`/images/${image}`} alt={alt} /></div><div className="visual-card__body"><span className="visual-card__label">{label}</span><h3>{title}</h3><p>{text}</p></div></article>)}
           </div>
         </section>
 
@@ -80,15 +112,15 @@ export default function Home() {
           <p className="section-kicker">Foil, felt tips and mild constitutional chaos.</p>
           <h2>Make it yourself</h2>
           <p>No special kit required. Raid the recycling, find the felt tips, rescue some cardboard and make something joyfully daft.</p>
-          <ul className="material-list">{materials.map((item) => <li key={item}>{item}</li>)}</ul>
+          <div className="material-chip-grid">{materials.map((item, index) => <span className="material-chip" key={item}><b>{materialIcons[index]}</b>{item}</span>)}</div>
           <p className="mt-5 font-bold text-white">Keep it removable, harmless and attached only to places you own or have permission to decorate.</p>
         </section>
 
-        <section className="py-14">
+        <section className="py-16">
           <p className="section-kicker">A street-sized wave of cardboard nonsense</p>
           <h2 className="section-title">Homemade project cards</h2>
           <div className="craft-grid">
-            {projectCards.map(([title, text]) => <article className="home-idea-card" key={title}><h3>{title}</h3><p>{text}</p></article>)}
+            {projectCards.map(([title, label, image, text]) => <article className="visual-card" key={title}><div className="visual-card__image"><img className="svg-illustration" src={`/images/${image}`} alt="" /></div><div className="visual-card__body"><span className="visual-card__label">{label}</span><h3>{title}</h3><p>{text}</p></div></article>)}
           </div>
         </section>
 

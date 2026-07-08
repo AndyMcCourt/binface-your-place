@@ -141,7 +141,7 @@ export function getArticleActionSections(article: Article) {
       'Bin owner with 20 minutes: one speech bubble and a shoebox lectern for a wheelie-bin briefing.',
       'Garden person: one plant pot, one foil moon, one tiny sign marked “Front Garden Lunar Authority.”',
     ],
-    doThis: ['Start tiny.', 'Use cardboard, paper, foil, string, tape and pens.', 'Keep it obviously fan-made and unofficial.', 'Ask permission for shared, rented or business spaces.', 'Remove it before it becomes mess.'],
+    doThis: ['Start tiny.', 'Use cardboard, paper, foil, string, tape and pens.', 'Keep it obviously unofficial, independent and unaffiliated.', 'Ask permission for shared, rented or business spaces.', 'Remove it before it becomes mess.'],
     dontThis: ['Do not stick things to public property.', 'Do not block pavements, roads, doors, safety notices or bin collections.', 'Do not impersonate officials, councils or Count Binface.', 'Do not show private details in photos.', 'Do not buy special kit unless you already wanted to.'],
     wording: ['Officially unofficial.', 'Temporary Ministry of Bins.', 'This window has been democratically upgraded.', 'Local area now 14% more constitutional.', 'Please form an orderly queue for nonsense.', 'A small but important victory for cardboard.'],
     related,
