@@ -29,10 +29,8 @@ Run `npm run build` and upload the generated `out/` folder to your static host.
 
 - real imprint text
 - promoter details, if applicable
-- privacy contact
 - article copy review
 - approval status
-- contact email
 - any real imagery
 - any official campaign wording
 - final compliance review
