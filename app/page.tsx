@@ -4,11 +4,13 @@ import { ArticleCard } from '@/components/ArticleCard';
 import { ideas } from '@/lib/ideas';
 import { latestArticle } from '@/lib/articles';
 import { DailyPrompt } from '@/components/DailyPrompt';
+import { CountBinfaceGallery } from '@/components/CountBinfaceGallery';
 
 export default function Home() {
   return (
     <>
       <Hero />
+      <CountBinfaceGallery />
       <section className="mx-auto max-w-6xl px-4">
         <div className="grid gap-5 lg:grid-cols-[1.2fr_.8fr]">
           <p className="panel rounded-3xl p-6 text-lg text-silver">
