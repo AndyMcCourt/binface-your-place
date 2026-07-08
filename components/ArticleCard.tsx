@@ -1,0 +1,2 @@
+import Link from 'next/link';import { Article } from '@/lib/articles';import { Badge } from './Badge';
+export function ArticleCard({article}:{article:Article}){return <article className="panel rounded-3xl p-6"><Badge>{article.category}</Badge><h3 className="mt-4 font-display text-3xl">{article.title}</h3><p className="mt-2 text-sm text-silver">{article.date} · {article.readingTime}</p><p className="mt-3 text-silver">{article.summary}</p><Link className="mt-5 inline-block font-bold text-bin" href={`/articles/${article.slug}/`}>Read article →</Link></article>}

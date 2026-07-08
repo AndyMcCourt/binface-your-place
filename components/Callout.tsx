@@ -1,0 +1,1 @@
+export function Callout({title='Intergalactic compliance note',children}:{title?:string;children:React.ReactNode}){return <aside className="panel rounded-3xl border-warning/50 p-5"><p className="eyebrow text-warning">{title}</p><div className="mt-2 text-sm text-silver">{children}</div></aside>}

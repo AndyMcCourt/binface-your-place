@@ -1,0 +1,1 @@
+export const prompts = { today: 'What would your bin say if it held a press conference?', tomorrow: 'Invent a lawful window slogan.', week: 'Imagine your place has been declared an intergalactic embassy.' };

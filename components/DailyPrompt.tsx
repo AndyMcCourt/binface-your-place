@@ -1,0 +1,2 @@
+import { prompts } from '@/lib/prompts';
+export function DailyPrompt(){return <div className="panel rounded-3xl p-6"><p className="eyebrow">Daily prompt</p><p className="mt-2 text-2xl font-black">Today’s prompt: {prompts.today}</p><p className="mt-2 text-silver">Tomorrow: {prompts.tomorrow} This week: {prompts.week}</p><p className="mt-3 text-sm text-warning">Static prompt only. No submissions, uploads or tracking.</p></div>}
