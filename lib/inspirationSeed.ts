@@ -5,4 +5,4 @@ export const inspiration = [
 {title:'Balcony of Bewildered Bunting',nickname:'Bunting Commander',area:'Somewhere with permission',category:'Best Balcony',caption:'Neighbours have questions. Democracy has a kazoo.',badge:'Most Alarming Use of Bunting'},
 {title:'Beach Hut Embassy Number 3',nickname:'Consul of Cardboard',area:'Fictional coastline',category:'Best Beach Hut',caption:'Diplomatic relations established with a seagull. Talks remain crunchy.',badge:'Best Beach Hut'},
 ];
-export const stats = { ideasPublished: 8, fictionalExamples: 5, binsRepresented: 1, articlesPublished: 6, awardsInvented: 10 };
+export const stats = { ideasPublished: 14, fictionalExamples: 5, binsRepresented: 1, articlesPublished: 9, awardsInvented: 14 };
