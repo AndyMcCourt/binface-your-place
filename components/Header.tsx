@@ -1,0 +1,2 @@
+import Link from 'next/link';import { navItems } from '@/lib/navigation';
+export function Header(){return <header className="sticky top-0 z-30 border-b border-white/10 bg-black/85 backdrop-blur"><nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4"><Link className="font-display text-xl tracking-wide" href="/">BINFACE YOUR PLACE</Link><div className="flex gap-3 overflow-x-auto text-sm font-bold">{navItems.map(n=><Link key={n.href} href={n.href} className="whitespace-nowrap text-silver hover:text-white">{n.label}</Link>)}</div></nav></header>}
