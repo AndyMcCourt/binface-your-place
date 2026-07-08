@@ -1,7 +1,7 @@
 import { Badge } from './Badge';
 
 const countBinfaceImage = {
-  src: 'https://upload.wikimedia.org/wikipedia/commons/9/95/Count_Binface.jpg',
+  src: 'https://upload.wikimedia.org/wikipedia/commons/0/0d/Count_Binface.jpg',
   alt: 'Count Binface at the Glee Club in Birmingham wearing the character helmet and silver cape',
   credit: 'Photo: Jpdfive via Wikimedia Commons, CC BY-SA 4.0',
   source: 'https://commons.wikimedia.org/wiki/File:Count_Binface.jpg',
@@ -16,7 +16,7 @@ const frames = [
   },
   {
     title: 'Helmet energy, close-up edition',
-    caption: 'Same licensed source, cropped by the browser for a punchier “decorate your domain” inspiration tile.',
+    caption: 'The same licensed source, cropped for a closer look at the unmistakable campaign helmet.',
     className: 'object-cover object-top',
   },
 ];
@@ -32,8 +32,8 @@ export function CountBinfaceGallery() {
           </h2>
         </div>
         <p className="max-w-2xl text-sm text-silver">
-          A couple of responsibly attributed visual reference points before you start constructing your own safe,
-          removable, cardboard-powered tribute to the Recyclon cause.
+          A couple of properly attributed visual reference points before you start constructing your own safe, removable,
+          cardboard-powered tribute to the Recyclon cause.
         </p>
       </div>
       <div className="grid gap-5 md:grid-cols-[1.15fr_.85fr]">
