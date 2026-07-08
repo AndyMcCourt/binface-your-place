@@ -19,11 +19,10 @@ export function CountBinfaceGallery() {
           </h2>
         </div>
         <p className="max-w-2xl text-sm text-silver">
-          One properly attributed photo, plus a separate no-repeat idea card before you start constructing your own
-          safe, removable, cardboard-powered tribute to the Recyclon cause.
+          One properly attributed photo of the intergalactic candidate in the wild.
         </p>
       </div>
-      <div className="grid gap-5 md:grid-cols-[1.15fr_.85fr]">
+      <div>
         <figure className="panel group overflow-hidden rounded-3xl">
           <div className="relative aspect-[4/3]">
             <img
@@ -39,25 +38,6 @@ export function CountBinfaceGallery() {
             </p>
           </div>
         </figure>
-
-        <article className="panel relative flex min-h-[22rem] overflow-hidden rounded-3xl p-6 md:min-h-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(57,255,136,.28),transparent_28%),radial-gradient(circle_at_78%_28%,rgba(255,214,10,.22),transparent_24%),linear-gradient(135deg,#07150d_0%,#020302_55%,#111_100%)]" />
-          <div className="absolute -right-10 top-6 h-40 w-40 rounded-full border border-neon/30" />
-          <div className="absolute bottom-0 left-0 h-28 w-full bg-gradient-to-t from-black/75 to-transparent" />
-          <div className="relative z-10 flex h-full flex-col justify-between gap-8">
-            <Badge>Display prompt</Badge>
-            <div>
-              <div className="mb-6 text-7xl" aria-hidden="true">
-                🗑️✨
-              </div>
-              <h3 className="font-display text-3xl text-white drop-shadow">Make your own Binface scene</h3>
-              <p className="mt-4 text-sm text-silver">
-                Try a window certificate, a wheelie-bin podium or a cereal-box helmet — something original that does
-                not reuse the same photo twice.
-              </p>
-            </div>
-          </div>
-        </article>
       </div>
     </section>
   );
