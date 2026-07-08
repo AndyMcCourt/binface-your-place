@@ -1,1 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img"><rect width="640" height="420" fill="#f4e7c5"/><path d="M0 345h640v75H0z" fill="#363636"/><path d="M30 330h580" stroke="#111" stroke-width="7" stroke-linecap="round"/><g opacity=".28"><path d="M0 28h640M0 86h640M0 144h640M0 202h640M0 260h640" stroke="#fff" stroke-width="3"/><path d="M50 0v420M130 0v420M210 0v420M290 0v420M370 0v420M450 0v420M530 0v420M610 0v420" stroke="#111" stroke-width="2"/></g><path d="M0 130V20M42 130V20M84 130V20M126 130V20" stroke="#7b4a25" stroke-width="13"/><path d="M-18 54h166M-18 100h166" stroke="#111" stroke-width="6"/><path d="M0 22l26 32 28-30 30 34 28-34" fill="none" stroke="#e11d48" stroke-width="5"/><path d="M0 22l25 0 1 32zM54 24l30 0v34zM112 24l26 0-26 34z" fill="#facc15" stroke="#111" stroke-width="3"/></g><g transform="translate(95 250) rotate(-4)"><rect width="150" height="48" fill="#fff" stroke="#111" stroke-width="5"/><text x="75" y="31" text-anchor="middle" font-family="Arial Black" font-size="13">SILLY BUT KIND</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img">
+  <rect width="640" height="420" fill="#f4e7c5"/>
+  <path d="M0 345h640v75H0z" fill="#363636"/>
+  <path d="M30 330h580" stroke="#111" stroke-width="7" stroke-linecap="round"/>
+  <g opacity=".28">
+    <path d="M0 28h640M0 86h640M0 144h640M0 202h640M0 260h640" stroke="#fff" stroke-width="3"/>
+    <path d="M50 0v420M130 0v420M210 0v420M290 0v420M370 0v420M450 0v420M530 0v420M610 0v420" stroke="#111" stroke-width="2"/>
+  </g>
+  <g transform="translate(250 128)">
+    <path d="M0 170V20M42 170V20M84 170V20M126 170V20" stroke="#7b4a25" stroke-width="13"/>
+    <path d="M-18 64h166M-18 120h166" stroke="#111" stroke-width="6"/>
+    <path d="M0 32l26 32 28-30 30 34 28-34" fill="none" stroke="#e11d48" stroke-width="5"/>
+    <path d="M0 32l25 0 1 32zM54 34l30 0v34zM112 34l26 0-26 34z" fill="#facc15" stroke="#111" stroke-width="3"/>
+  </g>
+  <g transform="translate(92 250) rotate(-4)">
+    <rect width="160" height="52" fill="#fff" stroke="#111" stroke-width="5"/>
+    <text x="80" y="33" text-anchor="middle" font-family="Arial Black" font-size="13">SILLY BUT KIND</text>
+  </g>
+  <g fill="#d9d9d9" stroke="#111" stroke-width="4">
+    <circle cx="148" cy="150" r="28"/>
+    <circle cx="500" cy="96" r="20"/>
+  </g>
+</svg>
