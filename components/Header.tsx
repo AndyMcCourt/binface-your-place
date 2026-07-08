@@ -1,2 +1,61 @@
-import Link from 'next/link';import { navItems } from '@/lib/navigation';
-export function Header(){return <header className="sticky top-0 z-30 border-b border-white/10 bg-black/85 backdrop-blur"><nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4"><Link className="font-display text-xl tracking-wide" href="/">BINFACE YOUR PLACE</Link><div className="flex gap-3 overflow-x-auto text-sm font-bold">{navItems.map(n=><Link key={n.href} href={n.href} className="whitespace-nowrap text-silver hover:text-white">{n.label}</Link>)}</div></nav></header>}
+'use client';
+
+import Link from 'next/link';
+import { useState } from 'react';
+import { navItems } from '@/lib/navigation';
+
+export function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  return (
+    <header className="sticky top-0 z-30 border-b border-white/10 bg-black/85 backdrop-blur">
+      <nav className="relative mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4">
+        <Link className="font-display text-xl tracking-wide" href="/" onClick={() => setIsMenuOpen(false)}>
+          BINFACE YOUR PLACE
+        </Link>
+
+        <div className="hidden gap-3 text-sm font-bold md:flex">
+          {navItems.map((n) => (
+            <Link key={n.href} href={n.href} className="whitespace-nowrap text-silver hover:text-white">
+              {n.label}
+            </Link>
+          ))}
+        </div>
+
+        <button
+          type="button"
+          className="inline-flex h-10 w-10 items-center justify-center rounded border border-white/15 text-silver hover:border-bin hover:text-white md:hidden"
+          aria-label="Toggle navigation menu"
+          aria-controls="mobile-navigation"
+          aria-expanded={isMenuOpen}
+          onClick={() => setIsMenuOpen((open) => !open)}
+        >
+          <span className="sr-only">Menu</span>
+          <span className="flex flex-col gap-1.5" aria-hidden="true">
+            <span className="block h-0.5 w-5 rounded bg-current" />
+            <span className="block h-0.5 w-5 rounded bg-current" />
+            <span className="block h-0.5 w-5 rounded bg-current" />
+          </span>
+        </button>
+
+        {isMenuOpen && (
+          <div
+            id="mobile-navigation"
+            className="absolute right-4 top-full mt-2 w-56 rounded border border-white/15 bg-black/95 p-2 shadow-glow md:hidden"
+          >
+            {navItems.map((n) => (
+              <Link
+                key={n.href}
+                href={n.href}
+                className="block rounded px-3 py-2 text-sm font-bold text-silver hover:bg-white/10 hover:text-white"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {n.label}
+              </Link>
+            ))}
+          </div>
+        )}
+      </nav>
+    </header>
+  );
+}
