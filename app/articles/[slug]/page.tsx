@@ -1,2 +1,59 @@
-import { articleBySlug, articles, relatedIdeaObjects } from '@/lib/articles';import { notFound } from 'next/navigation';import { Callout } from '@/components/Callout';import { IdeaCard } from '@/components/IdeaCard';export function generateStaticParams(){return articles.map(a=>({slug:a.slug}))}
-export default function ArticleDetail({params}:{params:{slug:string}}){const a=articleBySlug(params.slug);if(!a)notFound();return <article className="mx-auto max-w-4xl px-4 py-12"><p className="eyebrow">{a.category}</p><h1 className="font-display text-5xl">{a.title}</h1><p className="mt-3 text-silver">{a.date} · {a.readingTime}</p><p className="mt-5 text-xl text-silver">{a.summary}</p><Callout>{a.ruleReminder}</Callout><div className="prose prose-invert mt-8 max-w-none">{a.body.map(p=><p key={p}>{p}</p>)}</div><h2 className="mt-10 font-display text-3xl">Related static ideas</h2><div className="mt-4 grid gap-5 md:grid-cols-2">{relatedIdeaObjects(a).map(i=><IdeaCard key={i!.slug} idea={i!}/>)}</div></article>}
+import { notFound } from 'next/navigation';
+import { Callout } from '@/components/Callout';
+import { IdeaCard } from '@/components/IdeaCard';
+import { articleBySlug, articles, relatedIdeaObjects } from '@/lib/articles';
+
+export function generateStaticParams() {
+  return articles.map((article) => ({ slug: article.slug }));
+}
+
+export default function ArticleDetail({ params }: { params: { slug: string } }) {
+  const article = articleBySlug(params.slug);
+
+  if (!article) notFound();
+
+  return (
+    <article className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:py-16">
+      <header className="panel overflow-hidden rounded-[2rem] p-6 sm:p-8 lg:p-10">
+        <p className="eyebrow">{article.category}</p>
+        <h1 className="mt-3 font-display text-4xl leading-none sm:text-5xl lg:text-6xl">
+          {article.title}
+        </h1>
+        <p className="mt-4 text-sm font-bold uppercase tracking-[.22em] text-silver/80">
+          {article.date} · {article.readingTime}
+        </p>
+        <p className="mt-6 max-w-3xl text-lg leading-8 text-silver sm:text-xl sm:leading-9">
+          {article.summary}
+        </p>
+      </header>
+
+      <Callout>{article.ruleReminder}</Callout>
+
+      <div className="mt-8 space-y-5 sm:space-y-6">
+        {article.body.map((paragraph, index) => (
+          <section
+            className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[.04] p-5 shadow-glow sm:p-7"
+            key={`${article.slug}-${index}`}
+          >
+            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-bin/50 to-transparent" />
+            <div className="flex gap-4">
+              <span className="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-bin/40 bg-bin/10 font-display text-lg text-bin sm:h-10 sm:w-10">
+                {index + 1}
+              </span>
+              <p className="max-w-3xl text-lg leading-8 text-white/90 sm:text-xl sm:leading-9">
+                {paragraph}
+              </p>
+            </div>
+          </section>
+        ))}
+      </div>
+
+      <h2 className="mt-12 font-display text-3xl">Related static ideas</h2>
+      <div className="mt-4 grid gap-5 md:grid-cols-2">
+        {relatedIdeaObjects(article).map((idea) => (
+          <IdeaCard key={idea!.slug} idea={idea!} />
+        ))}
+      </div>
+    </article>
+  );
+}
