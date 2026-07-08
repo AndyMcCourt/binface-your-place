@@ -1,7 +1,9 @@
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Callout } from '@/components/Callout';
 import { IdeaCard } from '@/components/IdeaCard';
 import { articleBySlug, articles, relatedIdeaObjects } from '@/lib/articles';
+import { getArticleActionSections } from '@/lib/practical';
 
 export function generateStaticParams() {
   return articles.map((article) => ({ slug: article.slug }));
@@ -11,6 +13,9 @@ export default function ArticleDetail({ params }: { params: { slug: string } }) 
   const article = articleBySlug(params.slug);
 
   if (!article) notFound();
+
+  const actions = getArticleActionSections(article);
+  const relatedIdeas = relatedIdeaObjects(article);
 
   return (
     <article className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:py-16">
@@ -28,6 +33,11 @@ export default function ArticleDetail({ params }: { params: { slug: string } }) 
       </header>
 
       <Callout>{article.ruleReminder}</Callout>
+
+      <section className="practical-section mt-8">
+        <h2>Start with this tiny plan</h2>
+        <ol>{actions.starter.map((item) => <li key={item}>{item}</li>)}</ol>
+      </section>
 
       <div className="mt-8 space-y-5 sm:space-y-6">
         {article.body.map((paragraph, index) => (
@@ -48,9 +58,38 @@ export default function ArticleDetail({ params }: { params: { slug: string } }) 
         ))}
       </div>
 
-      <h2 className="mt-12 font-display text-3xl">Related static ideas</h2>
+      <section className="mt-8 grid gap-5 md:grid-cols-2">
+        <div className="practical-section">
+          <h2>What this could look like</h2>
+          <ul>{actions.scenarios.map((scenario) => <li key={scenario}>{scenario}</li>)}</ul>
+        </div>
+        <div className="practical-section copy-box">
+          <h2>Copy-paste phrases</h2>
+          <ul>{actions.wording.map((line) => <li key={line}>“{line}”</li>)}</ul>
+        </div>
+      </section>
+
+      <section className="mt-8 grid gap-5 md:grid-cols-2">
+        <div className="practical-section do-list">
+          <h2>Do this</h2>
+          <ul>{actions.doThis.map((item) => <li key={item}>{item}</li>)}</ul>
+        </div>
+        <div className="practical-section dont-list">
+          <h2>Don’t do this</h2>
+          <ul>{actions.dontThis.map((item) => <li key={item}>{item}</li>)}</ul>
+        </div>
+      </section>
+
+      <section className="practical-section mt-8">
+        <h2>Useful next clicks</h2>
+        <p>
+          If you are unsure about boundaries, start with the <Link href="/rules/">Tiny Rulebook</Link> or read the <Link href="/guide/">guide</Link>. If you want to make something immediately, try one of the related ideas below.
+        </p>
+      </section>
+
+      <h2 className="mt-12 font-display text-3xl">Related ideas you can actually make</h2>
       <div className="mt-4 grid gap-5 md:grid-cols-2">
-        {relatedIdeaObjects(article).map((idea) => (
+        {relatedIdeas.map((idea) => (
           <IdeaCard key={idea!.slug} idea={idea!} />
         ))}
       </div>
