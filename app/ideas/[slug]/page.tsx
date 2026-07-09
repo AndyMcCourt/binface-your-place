@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Callout } from '@/components/Callout';
@@ -26,6 +27,24 @@ export default function IdeaDetail({ params }: { params: { slug: string } }) {
         <p className="mt-4 text-xl leading-8 text-silver">{idea.description}</p>
         <p className="mt-5 text-lg leading-8 text-white">{practical.intro}</p>
       </header>
+
+      {idea.image && (
+        <figure className="panel mt-6 overflow-hidden rounded-[2rem]">
+          <div className="relative aspect-[16/10] w-full bg-warning">
+            <Image
+              src={idea.image}
+              alt={`${idea.title} example display`}
+              fill
+              sizes="(min-width: 1024px) 896px, 100vw"
+              className="object-cover"
+              priority
+            />
+          </div>
+          <figcaption className="px-5 py-4 text-sm font-bold uppercase tracking-wider text-silver">
+            Example look for {idea.title.toLowerCase()}
+          </figcaption>
+        </figure>
+      )}
 
       <section className="mt-6 grid gap-3 sm:grid-cols-3">
         <div className="info-tile"><span>Time needed</span><b>{practical.time}</b></div>
