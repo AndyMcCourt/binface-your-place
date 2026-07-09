@@ -21,7 +21,7 @@ export function Hero() {
           </div>
         </div>
         <figure className="hero-visual">
-          <img className="svg-illustration" src={publicAsset('/images/hero-street-scene.svg')} alt="Illustration of a street decorated with homemade Count Binface-supporting signs, bunting and a wheelie bin podium." />
+          <img className="svg-illustration" src={publicAsset('/images/file_0000000059a47246adb2ad8b0483caa8.png')} alt="Street scene decorated with homemade Count Binface-supporting signs, bunting and a wheelie bin podium." />
           <figcaption>Kitchen-table democracy, now visible from the pavement.</figcaption>
         </figure>
       </div>
