@@ -25,6 +25,10 @@ export default function IdeaDetail({ params }: { params: { slug: string } }) {
         <h1 className="mt-3 font-display text-4xl leading-none sm:text-6xl">{idea.title}</h1>
         <p className="mt-4 text-xl leading-8 text-silver">{idea.description}</p>
         <p className="mt-5 text-lg leading-8 text-white">{practical.intro}</p>
+        <figure className="idea-reference-image mt-6">
+          <img src={idea.image} alt={idea.imageAlt} />
+          <figcaption>Reference image for this idea</figcaption>
+        </figure>
       </header>
 
       <section className="mt-6 grid gap-3 sm:grid-cols-3">

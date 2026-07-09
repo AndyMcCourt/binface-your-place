@@ -111,3 +111,8 @@ footer a { @apply hover:text-bin; }
 .material-chip-grid { @apply mt-6 flex flex-wrap gap-3; }
 .material-chip { @apply inline-flex items-center gap-3 rounded-2xl border-2 border-white bg-black/45 px-4 py-3 font-black text-white shadow-[4px_4px_0_rgba(255,255,255,.18)]; }
 .material-chip b { @apply grid h-8 w-8 place-items-center rounded-full bg-bin text-lg text-black; }
+
+.idea-reference-image { @apply overflow-hidden rounded-[1.5rem] border-4 border-white bg-black shadow-[8px_8px_0_rgba(255,255,255,.18)]; }
+.idea-reference-image img { @apply block h-auto w-full bg-warning object-cover; }
+.idea-reference-image figcaption { @apply border-t-4 border-white bg-black px-4 py-3 text-sm font-black uppercase tracking-wider text-warning; }
+.idea-card-image { @apply mb-4 block aspect-[16/10] w-full rounded-2xl border-2 border-white bg-warning object-cover shadow-[4px_4px_0_rgba(255,255,255,.2)]; }
