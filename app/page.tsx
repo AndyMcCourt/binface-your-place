@@ -1,19 +1,12 @@
 import { Hero } from '@/components/Hero';
+import { IdeaCard } from '@/components/IdeaCard';
 import { publicAsset } from '@/lib/config';
+import { ideas } from '@/lib/ideas';
 
 const streetCards = [
   ['One window helps', 'A single handmade sign in a window is enough to make a street feel a little less beige.'],
   ['One bin helps', 'A wheelie bin already has the correct constitutional shape. It merely needs a podium, a slogan and a sense of destiny.'],
   ['One frontage helps', 'A door, porch, fence or garden can become a tiny act of visible silliness. Keep it friendly, removable and yours.'],
-];
-
-const binfaceIdeas = [
-  ['Your Window', 'Window kit', 'window-binface.svg', 'Homemade window display with paper signs, foil stars and a Binface-inspired face.', 'Paper signs, foil stars and one heroic helmet shape.'],
-  ['Your Wheelie Bin', 'Bin podium', 'wheelie-bin-podium.svg', 'Wheelie bin decorated as a homemade press podium with a cardboard manifesto sign.', 'A removable lectern for a bin with destiny.'],
-  ['Your Front Door', 'Door banner', 'front-door-banner.svg', 'Front door decorated with a temporary handmade banner and doormat sign.', 'Temporary tape, paper banner, doormat nonsense.'],
-  ['Your Fence', 'Fence kit', 'fence-bunting.svg', 'Fence decorated with paper bunting, cardboard planets and homemade signs.', 'Bunting, planets and friendly public cheer.'],
-  ['Your Garden', 'Moon scene', 'garden-moon-landing.svg', 'Front garden decorated as a homemade moon landing scene with foil and cardboard stars.', 'Foil moon, cardboard stars, heroic wheelie bin.'],
-  ['Your Porch', 'Porch HQ', 'porch-campaign-hq.svg', 'Porch decorated as a miniature homemade space campaign headquarters.', 'Arrows, signs and paper badges from space.'],
 ];
 
 const projectCards = [
@@ -59,6 +52,16 @@ export default function Home() {
           <a className="official-button official-link" href="https://www.countbinface.com/">Official Count Binface website</a>
         </section>
 
+
+        <section id="ideas" className="py-16 scroll-mt-24" aria-labelledby="home-ideas-heading">
+          <p className="section-kicker">Ideas hub</p>
+          <h2 id="home-ideas-heading" className="section-title">Ideas for cheerful ridiculousness</h2>
+          <p className="section-intro">Pick a tiny spectacle, add cardboard, and let your front window wonder how it got elected. Static inspiration only: no kits, submissions, targeting or public-property sticker albums.</p>
+          <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {ideas.map((idea) => <IdeaCard key={idea.slug} idea={idea} />)}
+          </div>
+        </section>
+
         <section className="street-section">
           <p className="section-kicker">For windows, bins, fences and other democratic surfaces.</p>
           <h2>Your street, but more Binface</h2>
@@ -90,14 +93,6 @@ export default function Home() {
           <p className="section-intro">Start with something small. A window. A bin. A fence. A sign. Then let the nonsense spread politely.</p>
           <div className="lookbook-grid">
             {lookBook.map(([label, caption, image]) => <figure className="lookbook-tile" key={label}><img className="svg-illustration" src={publicAsset(`/images/${image}`)} alt="" /><figcaption><strong>{label}</strong><span>{caption}</span></figcaption></figure>)}
-          </div>
-        </section>
-
-        <section id="ideas" className="py-16 scroll-mt-8">
-          <p className="section-kicker">Cardboard is the people’s medium.</p>
-          <h2 className="section-title">What can you Binface?</h2>
-          <div className="craft-grid">
-            {binfaceIdeas.map(([title, label, image, alt, text]) => <article className="visual-card" key={title}><div className="visual-card__image"><img className="svg-illustration" src={publicAsset(`/images/${image}`)} alt={alt} /></div><div className="visual-card__body"><span className="visual-card__label">{label}</span><h3>{title}</h3><p>{text}</p></div></article>)}
           </div>
         </section>
 

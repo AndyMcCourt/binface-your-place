@@ -2,7 +2,7 @@ import { basePath } from './config';
 
 export const navItems = [
   { href: '/', label: 'Home' },
-  { href: '/ideas/', label: 'Ideas' },
+  { href: '/#ideas', label: 'Ideas' },
   { href: '/articles/', label: 'Articles' },
   { href: '/guide/', label: 'Guide' },
   { href: '/rules/', label: 'Rules' },
