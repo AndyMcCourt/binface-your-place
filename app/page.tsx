@@ -1,4 +1,5 @@
 import { Hero } from '@/components/Hero';
+import { publicAsset } from '@/lib/config';
 
 const streetCards = [
   ['One window helps', 'A single handmade sign in a window is enough to make a street feel a little less beige.'],
@@ -71,7 +72,7 @@ export default function Home() {
         <section className="before-after-strip" aria-labelledby="before-after-heading">
           <h2 id="before-after-heading">Before and after</h2>
           <div className="grid gap-5 md:grid-cols-3">
-            {beforeAfter.map(([before, after, image]) => <article className="before-after-card" key={before}><img className="svg-illustration" src={`/images/${image}`} alt="" /><div><span>{before}</span><strong>{after}</strong></div></article>)}
+            {beforeAfter.map(([before, after, image]) => <article className="before-after-card" key={before}><img className="svg-illustration" src={publicAsset(`/images/${image}`)} alt="" /><div><span>{before}</span><strong>{after}</strong></div></article>)}
           </div>
         </section>
 
@@ -88,7 +89,7 @@ export default function Home() {
           <h2 className="section-title">The look book</h2>
           <p className="section-intro">Start with something small. A window. A bin. A fence. A sign. Then let the nonsense spread politely.</p>
           <div className="lookbook-grid">
-            {lookBook.map(([label, caption, image]) => <figure className="lookbook-tile" key={label}><img className="svg-illustration" src={`/images/${image}`} alt="" /><figcaption><strong>{label}</strong><span>{caption}</span></figcaption></figure>)}
+            {lookBook.map(([label, caption, image]) => <figure className="lookbook-tile" key={label}><img className="svg-illustration" src={publicAsset(`/images/${image}`)} alt="" /><figcaption><strong>{label}</strong><span>{caption}</span></figcaption></figure>)}
           </div>
         </section>
 
@@ -96,7 +97,7 @@ export default function Home() {
           <p className="section-kicker">Cardboard is the people’s medium.</p>
           <h2 className="section-title">What can you Binface?</h2>
           <div className="craft-grid">
-            {binfaceIdeas.map(([title, label, image, alt, text]) => <article className="visual-card" key={title}><div className="visual-card__image"><img className="svg-illustration" src={`/images/${image}`} alt={alt} /></div><div className="visual-card__body"><span className="visual-card__label">{label}</span><h3>{title}</h3><p>{text}</p></div></article>)}
+            {binfaceIdeas.map(([title, label, image, alt, text]) => <article className="visual-card" key={title}><div className="visual-card__image"><img className="svg-illustration" src={publicAsset(`/images/${image}`)} alt={alt} /></div><div className="visual-card__body"><span className="visual-card__label">{label}</span><h3>{title}</h3><p>{text}</p></div></article>)}
           </div>
         </section>
 
@@ -120,7 +121,7 @@ export default function Home() {
           <p className="section-kicker">A street-sized wave of cardboard nonsense</p>
           <h2 className="section-title">Homemade project cards</h2>
           <div className="craft-grid">
-            {projectCards.map(([title, label, image, text]) => <article className="visual-card" key={title}><div className="visual-card__image"><img className="svg-illustration" src={`/images/${image}`} alt="" /></div><div className="visual-card__body"><span className="visual-card__label">{label}</span><h3>{title}</h3><p>{text}</p></div></article>)}
+            {projectCards.map(([title, label, image, text]) => <article className="visual-card" key={title}><div className="visual-card__image"><img className="svg-illustration" src={publicAsset(`/images/${image}`)} alt="" /></div><div className="visual-card__body"><span className="visual-card__label">{label}</span><h3>{title}</h3><p>{text}</p></div></article>)}
           </div>
         </section>
 

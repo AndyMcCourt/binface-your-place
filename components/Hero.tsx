@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { publicAsset } from '@/lib/config';
 
 export function Hero() {
   return (
@@ -20,7 +21,7 @@ export function Hero() {
           </div>
         </div>
         <figure className="hero-visual">
-          <img className="svg-illustration" src="/images/hero-street-scene.svg" alt="Illustration of a street decorated with homemade Binface-inspired signs, bunting and a wheelie bin podium." />
+          <img className="svg-illustration" src={publicAsset('/images/hero-street-scene.svg')} alt="Illustration of a street decorated with homemade Binface-inspired signs, bunting and a wheelie bin podium." />
           <figcaption>Kitchen-table democracy, now visible from the pavement.</figcaption>
         </figure>
       </div>
