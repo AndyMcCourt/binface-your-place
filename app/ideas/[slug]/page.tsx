@@ -36,7 +36,7 @@ export default function IdeaDetail({ params }: { params: { slug: string } }) {
               alt={`${idea.title} example display`}
               fill
               sizes="(min-width: 1024px) 896px, 100vw"
-              className="object-cover"
+              className="object-contain sm:object-cover"
               priority
             />
           </div>
