@@ -7,15 +7,16 @@ export function Footer() {
         <div>
           <p className="font-display text-2xl">BINFACE YOUR PLACE</p>
           <p className="mt-2 text-sm text-silver">
-            Binface Your Place is unofficial, independent and unaffiliated with Count Binface. It is a collection of arts-and-crafts ideas for harmless home decoration. For official Count Binface news, policies, merch and intergalactic leadership, visit the official Count Binface website.
+            Binface Your Place is an unofficial supporter decoration project. It is not run by or affiliated with Count Binface. For the real Count Binface, official campaign updates, posters, merch and intergalactic leadership, visit countbinface.com.
           </p>
-          <p className="mt-2 text-sm font-bold text-white">Your street, but more Binface. One window, bin, fence and front garden at a time.</p>
+          <p className="mt-2 text-sm font-bold text-white">Make your place look like it backs Count Binface. One window, bin, fence and front garden at a time.</p>
         </div>
         <nav className="flex flex-wrap items-start gap-4 text-sm">
-          <Link href="/about/">About & Privacy</Link>
-          <Link href="/rules/">Rules</Link>
-          <a className="official-button official-link" href="https://www.countbinface.com/">Official Count Binface website</a>
-          <a className="official-link" href="https://www.countbinface.com/">See the real Count Binface</a>
+          <a className="official-link" href="https://www.countbinface.com/">Official Count Binface</a>
+          <a className="official-link" href="https://countbinface.com/poster">Printable Poster</a>
+          <Link href="/rules/">Decoration Rules</Link>
+          <Link href="/about/">About This Site</Link>
+          <a className="official-button official-link" href="https://www.countbinface.com/">Visit the official Count Binface</a>
         </nav>
       </div>
     </footer>

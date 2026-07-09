@@ -71,7 +71,7 @@ const practicalBySlug: Record<string, Partial<IdeaPractical>> = {
     bestFor: ['wheelie bins on private driveways', 'covered bin stores with permission'],
     materials: ['removable card panels', 'foil stars', 'cardboard tubes', 'shoebox or flat box', 'tape', 'string'],
     steps: ['Make decorations on card panels first so the bin itself stays clean.', 'Tape stars and a ringed planet to the panels.', 'Cover two cardboard tubes with foil.', 'Fix the tubes to a box lid to create pretend telescopes.', 'Rest the box on the bin only while supervised and safe.', 'Remove everything before collection or bad weather.'],
-    wording: ['Wheelie Bin Space Station.', 'Collection day launch window.', 'Refuse Command has entered orbit.', 'Do not jettison the recycling.'],
+    wording: ['Count Binface Wheelie Bin HQ.', 'Collection day launch window.', 'Refuse Command has entered orbit.', 'Do not jettison the recycling.'],
     upgrades: ['Add a cardboard control panel.', 'Make a matching mission badge for the lid.', 'Stage a tiny press conference beside it.'],
     sensible: ['Do not stop the lid opening or the bin being moved.', 'Keep the bin off pavements and roads.', 'Remove tubes if wind picks up.'],
     relatedIdeas: ['paper-planet-rings', 'public-cheerfulness-placards'],
