@@ -24,8 +24,8 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-env:
-  NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+# Do not set NEXT_PUBLIC_BASE_PATH here: the site is served from a custom domain root,
+# so CSS and JS assets must be emitted at /_next/... rather than /<repo>/_next/... .
 
 jobs:
   # Build job
