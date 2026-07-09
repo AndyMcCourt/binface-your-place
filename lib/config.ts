@@ -7,3 +7,10 @@ export const siteConfig = {
   galleryCategories: ['Best Window','Best Bin','Best Garden','Best Shopfront','Best Balcony','Best Beach Hut','Best Handmade Effort','Most Gloriously Well-Behaved Display','Most Alarming Use of Bunting','Outstanding Contribution to Intergalactic Shenanigans'],
   complianceWarnings: ['Use your own property, or get permission.','Pay for your own materials.','Do not put anything on public property.','Do not fly-post.','Do not pretend to be official when you are not.','Keep displays safe, funny and splendidly non-abusive.','Do not collect voting intention, addresses or political opinions through this site.'],
 };
+
+
+export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
+export function publicAsset(path: string) {
+  return `${basePath}${path.startsWith('/') ? path : `/${path}`}`;
+}
