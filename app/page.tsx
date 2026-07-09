@@ -17,13 +17,13 @@ const binfaceIdeas = [
 ];
 
 const projectCards = [
-  ['The Wheelie Bin Press Conference', 'Press kit', 'wheelie-bin-press-conference.svg', 'Turn one innocent wheelie bin into a homemade press podium.'],
-  ['The Binface Embassy', 'Embassy', 'binface-embassy.svg', 'Declare your porch, window or garden gate to be a tiny unofficial embassy.'],
-  ['The Front Garden Moon Landing', 'Lunar bin', 'front-garden-moon-landing.svg', 'Use foil, cardboard, paper stars and one brave bin.'],
-  ['The Constitutionally Significant Doormat', 'Threshold', 'significant-doormat.svg', 'Upgrade your doormat with a temporary handmade sign.'],
-  ['A Manifesto for Sensible Lids', 'Manifesto', 'sensible-lids-manifesto.svg', 'Make a tiny homemade manifesto for your bin.'],
-  ['The Window of Mild Defiance', 'Window', 'window-mild-defiance.svg', 'Choose cardboard, silliness and intergalactic taste.'],
-  ['The Fence of Public Cheerfulness', 'Fence', 'fence-public-cheerfulness.svg', 'Turn your fence into a friendly row of signs and flags.'],
+  ['Foil Star Window Constellation', 'Window stars', 'before-after-window.svg', 'Hang foil stars at different heights to make the glass feel like mission control.'],
+  ['Cardboard Rocket Window', 'Window rocket', 'window-binface.svg', 'Build a foil-bodied rocket with a red nose cone, fins and a round porthole.'],
+  ['Space Bunting Garland', 'Fence bunting', 'fence-bunting.svg', 'String silver, black and cardboard triangles across your own fence or window.'],
+  ['Front Garden Rocket Launch', 'Launchpad', 'front-garden-moon-landing.svg', 'Make a standing rocket centrepiece with a foil cone and oversized shiny fins.'],
+  ['Wheelie Bin Space Station', 'Bin station', 'wheelie-bin-podium.svg', 'Add removable panels, stars, a planet badge and pretend telescope tubes.'],
+  ['Flying Saucer and Alien', 'UFO', 'garden-moon-landing.svg', 'Create a tiny foil saucer with a clear dome and green alien pilot.'],
+  ['Public Cheerfulness Placards', 'Placards', 'fence-public-cheerfulness.svg', 'Paint friendly cardboard signs with one bold slogan and a few foil stars.'],
 ];
 
 const lookBook = [
