@@ -111,7 +111,11 @@ footer a { @apply hover:text-bin; }
 .material-chip-grid { @apply mt-6 flex flex-wrap gap-3; }
 .material-chip { @apply inline-flex items-center gap-3 rounded-2xl border-2 border-white bg-black/45 px-4 py-3 font-black text-white shadow-[4px_4px_0_rgba(255,255,255,.18)]; }
 .material-chip b { @apply grid h-8 w-8 place-items-center rounded-full bg-bin text-lg text-black; }
-.poster-card { @apply border-4 border-white bg-black shadow-[10px_10px_0_rgba(225,29,72,.75)]; }
+.poster-card { @apply border-4 border-white bg-black text-white shadow-[10px_10px_0_rgba(225,29,72,.75)]; }
+.poster-card h3,
+.poster-card strong { @apply text-white; }
+.poster-card p,
+.poster-card dt { @apply text-silver; }
 .official-strip { @apply my-14 grid gap-5 rounded-none border-y-4 border-white bg-red-700 p-6 shadow-[12px_12px_0_rgba(255,255,255,.25)] md:grid-cols-[1fr_auto] md:items-center; }
 .official-strip h2 { @apply mt-3 font-display text-5xl uppercase leading-none md:text-7xl; }
 .official-strip p { @apply mt-4 max-w-4xl text-lg font-bold text-white; }
