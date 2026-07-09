@@ -26,6 +26,7 @@ export default function IdeaDetail({ params }: { params: { slug: string } }) {
         <h1 className="mt-3 font-display text-4xl leading-none sm:text-6xl">{idea.title}</h1>
         <p className="mt-4 text-xl leading-8 text-silver">{idea.description}</p>
         <p className="mt-5 text-lg leading-8 text-white">{practical.intro}</p>
+        <p className="mt-5 border-y border-white/20 py-3 text-lg font-black uppercase text-white"><span className="text-bin">Suggested slogan:</span> {idea.suggestedSlogan}</p>
       </header>
 
       {idea.image && (
