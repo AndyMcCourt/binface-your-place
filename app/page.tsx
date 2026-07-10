@@ -24,19 +24,19 @@ const projectCards = [
   ['Count Binface Rocket Window', 'CARDBOARD DEMOCRACY', 'window-binface.svg', 'Build a foil-bodied rocket with a red nose cone, fins and a round porthole.'],
   ['Count Binface Bunting Garland', 'EARTHLING APPROVED', 'fence-bunting.svg', 'String silver, black and cardboard triangles across your own fence or window.'],
   ['Front Garden Binface Launchpad', 'UNOFFICIAL', 'front-garden-moon-landing.svg', 'Make a standing rocket centrepiece with a foil cone and oversized shiny fins.'],
-  ['Count Binface Wheelie Bin HQ', 'BIN-READY', 'wheelie-bin-podium.svg', 'Add removable panels, stars, a planet badge and pretend telescope tubes.'],
+  ['Count Binface Wheelie Bin Podium', 'BIN-READY', 'wheelie-bin-podium.svg', 'Add a removable podium front, stars, a planet badge and one bold slogan.'],
   ['Recyclon Flying Saucer', 'RECYCLON READY', 'garden-moon-landing.svg', 'Create a tiny foil saucer with a clear dome and green alien pilot.'],
   ['Count Binface Support Placards', 'BIG SLOGAN ENERGY', 'fence-public-cheerfulness.svg', 'Paint friendly cardboard signs with one bold slogan and a few foil stars.'],
 ];
 
-const slogans = ['Make Your Place Count','This Bin Backs Binface','Earthlings For Binface','Make Earth Great Again','Recyclons Welcome','Count Binface Support HQ','Window For Binface','Cardboard For Democracy','Affordable Croissants Now','Bring Back Ceefax','Lasers, Lovejoy and Local Democracy'];
+const slogans = ['Make Your Place Count','This Bin Backs Binface','Earthlings For Binface','Make Earth Great Again','Recyclons Welcome','Count Binface Podium','Window For Binface','Cardboard For Democracy','Affordable Croissants Now','Bring Back Ceefax','Lasers, Lovejoy and Local Democracy'];
 const lookBook = [
   ['Window poster', 'Paper slogan, foil stars, visible from the pavement.', 'window-binface.svg'],
   ['Bin podium', 'One wheelie bin. One cardboard lectern. Infinite authority.', 'wheelie-bin-podium.svg'],
   ['Door banner', 'A temporary welcome to mild constitutional chaos.', 'front-door-banner.svg'],
   ['Fence bunting', 'Flags, planets and signs on your own fence.', 'fence-bunting.svg'],
   ['Garden scene', 'A tiny moon landing for one heroic household bin.', 'garden-moon-landing.svg'],
-  ['Porch HQ', 'Arrows, badges and deeply unserious civic energy.', 'porch-campaign-hq.svg'],
+  ['Porch podium', 'Arrows, badges and deeply unserious civic energy.', 'porch-campaign-hq.svg'],
 ];
 const beforeAfter = [['Before: normal window', 'After: window backing Count Binface', 'before-after-window.svg'],['Before: ordinary bin', 'After: bin with destiny', 'before-after-bin.svg'],['Before: quiet fence', 'After: fence of Count Binface support', 'before-after-fence.svg']];
 const materials = ['cardboard', 'paper', 'foil', 'string', 'tape', 'felt tips', 'delivery boxes', 'reusable decorations', 'window-safe materials', 'paper plates', 'bottle tops', 'wrapping paper', 'anything silver'];
