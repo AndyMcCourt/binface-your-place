@@ -6,7 +6,6 @@ export const navItems = [
   { href: '/articles/', label: 'Articles' },
   { href: '/guide/', label: 'Guide' },
   { href: '/rules/', label: 'Rules' },
-  { href: '/inspiration/', label: 'Inspiration' },
   { href: '/about/', label: 'About' },
 ];
 
